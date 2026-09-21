@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+.grey-button{
+  height: 70px;
+  width: 70px;
+  background-color: grey;
+  border-radius: 35px;
+  border: none;
+}
+body{
+  margin-left: 100px;
+}
+.orange-button{
+    height: 70px;
+  width: 70px;
+  border: none;
+  margin-left: 10px;
+  background-color: orange;
+  font-size: 20px;
+  color: white;
+  border-radius: 35px;
+}
+.calculation{
+  color: white;
+  font-size: 45px;
+  margin-top: 15px; 
+}
+  </style>
+</head>
+<body>
+  <p style="height: 50px; width: 50px; font-size: large;" class="js-calculation calculation"></p>
+  <p>
+<button onclick="updateNumber('1');" class="grey-button">1</button>
+<button class="grey-button">2</button>
+<button class="grey-button">3</button>
+<button class="orange-button">+</button>
+  </p>
+    <p>
+<button class="grey-button">4</button>
+<button class="grey-button">5</button>
+<button class="grey-button">6</button>
+<button class="orange-button">-</button>
+  </p>
+    <p>
+<button class="grey-button">7</button>
+<button class="grey-button">8</button>
+<button class="grey-button">9</button>
+<button class="orange-button">*</button>
+  </p>
+    <p>
+<button class="grey-button">0</button>
+<button class="grey-button">.</button>
+<button class="grey-button">=</button>
+<button class="orange-button">/</button>
+  </p>
+  <button class="grey-button">clear</button>
+
+  <script>
+let calculation = localStorage.getItem('calculation',calculation);
+displayElement();
+
+function updateNumber(value){
+  calculation = calculation+value;
+  displayElement();
+  localStorage.setItem('calculation', calculation);
+}
+function displayElement(){
+  const calculation = document.querySelector('.js-calculation')
+  .innerHTML = calculation;
+}
+
+
+
+  </script>
+</body>
+</html>

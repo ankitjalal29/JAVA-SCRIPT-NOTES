@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+  <body>
+
+
+    <script>
+const product ={
+  name:'scoks',
+  price:1090
+}   ;
+console.log(product);
+console.log(product.name);
+console.log(product.price);
+
+product.name='cotton socks';
+console.log(product);
+product.newProperty='true';
+console.log(product);
+delete product.newProperty;
+console.log(product);
+const product2={
+  name: 'shirt',
+  'delivery-time':'1day',
+  rating:{
+    stars: 4.5,
+    count:87
+  }
+};
+console.log(product2);
+console.log(product2.name);
+console.log(product2['delivery-time']);
+console.log(product2.rating.stars);
+console.log(product2.rating.count);
+const jsonStrigify= JSON.stringify(product2);
+  console.log(JSON.parse(jsonStrigify));
+
+const object1={
+  message: 'hello',
+};
+const object2= object1;
+object1.message='good job!';
+console.log(object1);
+console.log(object2);
+
+const object3={
+  message:'good job!'
+};
+console.log(object1===object3);
+console.log(object1===object2);
+
+const object4={
+  message:'goodjob!'
+};
+const {message}=object4;
+console.log(object4);
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+<head>
+  <title>
+  9g exersice
+</title>
+</head>
+<body>
+  <input  class="button-number" type="number" placeholder="enter the cost">
+  <button class="calculator" onclick="calcualteTheNumber();">calculate</button>
+  <p class="button-para"></p>
+  <input class="button-enter" type="text"placeholder="enter name"onkeyup="newGame() ">
+  <p class="newTopic">ankit</p>
+</body>
+<script>
+  function newGame(){
+    const newElement=document.querySelector('.button-enter');
+  let point=newElement.value;
+  document.querySelector('.newTopic').innerHTML=`${point}`;
+  
+  };
+
+  function calcualteTheNumber(){
+   const element= document.querySelector('.button-number');
+   let cost=element.value*100;
+   if(cost<4000){
+cost+=1000;
+   }
+   
+
+   document.querySelector('.button-para').innerHTML=`$${cost/100}`;
+  }
+  
+</script>
+
+</html>

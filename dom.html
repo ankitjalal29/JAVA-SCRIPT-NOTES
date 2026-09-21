@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom</title>
+</head>
+<body>
+  <button 
+  onclick="document.querySelector('.js-choice')
+  .innerHTML='You choose: heads.';"
+  >heads</button>
+  <button 
+  onclick="document.querySelector('.js-choice')
+  .innerHTML='You choose: tails.';"
+  >tails</button>
+  <p class="js-choice"></p>
+<input type="text" placeholder="name" class="js-name-input" onkeydown="
+if(event.key==='Enter'){
+  submitElemnt();
+}"
+>
+<button
+
+onclick="
+submitElemnt();
+"
+>submit</button>
+<p class="js-lol"></p>
+
+  <script>
+  function submitElemnt(){
+
+const enterElement= document.querySelector('.js-name-input')
+document.querySelector('.js-lol').
+innerHTML=`your name is : ${enterElement.value}.`;
+
+
+  }
+  </script>
+</body>
+</html>

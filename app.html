@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>app</title>
+</head>
+<body>
+  
+<button class=" js-click">click</button>
+
+
+<script>
+
+const element = document.querySelector('.js-click');
+const eventListener=()=>{
+  console.log('click');
+}
+element.addEventListener('click',eventListener);
+element.removeEventListener('click',eventListener);
+
+element.addEventListener('click', ()=>{
+  console.log('click2');
+});
+
+
+    /*
+let message=2;
+
+
+
+
+setInterval(function(){
+  if(document.title==='app'){
+    document.title=`( ${message} ) New message`;
+  }
+  else{
+    document.title='app';
+  }
+},1000);
+
+const arrowFunction =() => {
+  console.log('Ankit');
+};
+arrowFunction();
+
+const regularFunction=function(){
+  console.log('jalal');
+};
+regularFunction();
+
+const regularFun =function(param)
+{
+  console.log(param +3);
+}
+regularFun(2);
+const arrowFun =()=> 2+3;
+console.log(arrowFun());
+arrowFun();
+
+
+*/
+
+
+  </script>
+</body>
+</html>

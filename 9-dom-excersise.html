@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    dom project
+  </title>
+
+</head>
+
+<body>
+  <!-- <button>9a</button>
+    <button class="button-b">9b</button> -->
+  <button class="heads-button" onclick=" toss('heads')">heads</button>
+  <button class="heads-button" onclick="toss('tails')">tails</button>
+  <p class="para"></p>
+  <input class="input-button" type="text" placeholder="name" onkeydown="if(event.key==='Enter'){
+  chooseYourName();
+}">
+  <button onclick="chooseYourName();">Submit</button>
+  <p class="name-button"></p>
+
+
+
+
+  <script>
+    // console.log(document.querySelector('button'));
+    // console.log(document.querySelector('.button-b').innerHTML='9b done !');
+    function chooseYourName() {
+
+      const element = document.querySelector('.input-button');
+      const text = element.value;
+
+      document.querySelector('.name-button').innerHTML = `your name is :${text}`;
+    }
+    ;
+    function toss(result) {
+      document.querySelector('.para').innerHTML = `you chose:${result}.`;
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    todolist
+  </title>
+</head>
+<style>
+  body{
+    font-family: Arial;
+    font-size: 20px;
+  }
+  button{
+    font-size: 20px;
+  }
+  input{
+    font-size: 20px;
+  }
+  .input-name,.input-element{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .input-element{
+  margin-bottom: 20px;
+  }
+  .color{
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .col{
+    background-color:red;
+    color: white;
+     border: none;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <h2>Todo List</h2>
+  <div class="input-element">
+  
+  <input type="text" placeholder="enter name" class="js-input-name">
+  <input type="date"placeholder="enter " class="js-input-todo">
+  <button onclick="addList();" class="color">Add</button>
+</div>
+  <div class="input-div input-name"></div>
+
+</body>
+<script>
+  const listTodo = [{
+    name: 'make dinner',
+    dueDate:' 2022-08-01'
+  }
+    , {
+      name: 'wash dishes',
+    dueDate: ' 2022-08-01'
+  }];
+  renderTodo();
+  function renderTodo() {
+    let elementHtml = '';
+    for (let i = 0; i < listTodo.length; i++) {
+      const number = listTodo[i];
+      const name=number.name;
+      const dueDate=number.dueDate;
+      const html = `<div>${name}</div><div> ${dueDate}</div> <button class="col" onclick="listTodo.splice(${i},1); renderTodo();">delete</button>`;
+      elementHtml += html;
+    }
+    console.log(elementHtml);
+    document.querySelector('.input-div').innerHTML = elementHtml;
+
+  };
+
+  const todolist = [];
+
+  function addList() {
+    const element = document.querySelector('.js-input-name');
+    const name = element.value;
+
+   const dueElement= document.querySelector('.js-input-todo');
+    const dueDate=dueElement.value;
+    listTodo.push({name,dueDate});
+    element.value = '';
+    renderTodo();
+  };
+
+
+</script>
+
+</html>

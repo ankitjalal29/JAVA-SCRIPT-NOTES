@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="done" onclick="setTimeout(function changed(){
+   
+document.querySelector('.done').innerHTML='finished!';
+
+},1000);
+ document.querySelector('.done').innerHTML='loading....';
+">start</button>
+<button onclick="addedToCart();">Add To Cart </button>
+<p class="para"></p>
+
+</body>
+<script>
+  const add=function(){
+    console.log(2+3);
+  }
+  add();
+
+  // function runTwice(fun){
+
+  // }
+  // console.log(runTwice(fun(){c}));
+  let timeOutId;
+
+function addedToCart(){
+  const element=document.querySelector('.para');
+  element.innerHTML='added';
+  clearInterval(timeOutId);
+ timeOutId = setTimeout(function(){
+    element.innerHTML='';
+  },2000);
+  setTimeout();
+  
+};
+
+  
+
+
+  setTimeout(function(){
+    document.title='app';
+  },1000);
+  
+  
+  
+    
+
+
+    function displayTheMessage(){
+      let message='';
+
+    }
+
+
+
+</script>
+</html>

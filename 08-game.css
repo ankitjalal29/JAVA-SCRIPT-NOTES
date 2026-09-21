@@ -1,0 +1,33 @@
+.move-icon{
+height: 90px;  
+width: 70px;
+
+}
+.button{
+background-color: transparent;
+background-color: black;
+  border:4px solid  yellow;
+  border-radius: 60px;
+  width: 120px;
+  height: 120px;
+cursor: pointer;
+}
+.result{
+  font-size: 25px;
+  font-weight: bold;
+}
+.move{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.showResult{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.reset{
+  height: 30px;
+  width: 100px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+}

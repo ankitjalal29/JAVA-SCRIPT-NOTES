@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><title>toss</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .toss:hover{
+  background-color: rgb(173, 101, 12);
+  transition: 1s;
+
+}
+.toss{
+  display: flex;justify-content:center;align-items: center; align-self: center;justify-self: center;margin-top: 100px;background-color: blue; height: 200px;width: 200px;border-radius: 100px;font-size: 100px;
+}
+  </style>
+</head>
+<body>
+  <h1 style="display: flex; justify-content: center;height: 50px;"> 1-TOSS</h1>
+
+  <button class="toss" 
+  onclick="const randomNumber=Math.random();
+  let computerMOve='';
+
+  if( randomNumber>=0 && randomNumber<1/2){
+    computerMOve='tail.';
+  }
+  else{computerMOve='head.';
+
+  }
+  console.log(computerMOve);
+  alert(`${computerMOve}`);
+
+
+ " >toss</button>
+
+
+
+</body>
+
+</html>

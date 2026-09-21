@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input class="input-js" type="text" placehoder="enter your name">
+  <button onclick="practise();">add</button>
+<p class="para-js"></p>
+</body>
+<script>
+  function practise(){
+  const element = document.querySelector('.input-js');
+  const cost= element.value;
+  document.querySelector('.para-js').innerHTML=cost;
+  }
+</script>
+</html>

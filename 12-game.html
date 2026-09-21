@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>games by me </title>
+  <link rel="stylesheet" href="12-game.css">
+  
+</head>
+
+<body>
+
+  <p>Rock Paper Scissors</p>
+  <button class="button" 
+  
+    ><img class="move-icon js-rock" src="rock-emoji.png"></button>
+  <button class="button"  
+  ><img class="move-icon js-paper" src="paper-emoji.png" ></button>
+  <button class="button" 
+  ><img  src="scissors-emoji.png" class="move-icon js-scissor" ></button>
+  <p class="resultOftheGame  result">result </p>
+  <p class="move">
+  </p>
+  <p class="showResult">score</p>
+
+  <button class="rese" onclick="
+  score.wins=0;
+  score.losses=0;
+  score.ties=0;
+  localStorage.removeItem('score');
+  document.querySelector('.showResult').innerHTML='wins: 0,losses: 0,ties: 0'
+  ">reset score </button>
+
+
+<button class="auto-play-button" onclick="autoPlay();"> Auto play</button>
+
+  <script src="12-game.js"></script>
+
+
+
+</body>
+
+</html>

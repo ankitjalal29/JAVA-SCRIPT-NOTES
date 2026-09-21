@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>quantatity check</title>
+</head>
+
+<body>
+   
+ <button onclick="
+ function issamevalue(product1, product2,product3){
+
+  if (
+    product1.name===product2.name&&
+    product1.price===product2.price
+  )
+  {
+    return true;
+  }
+  else{
+    return false;
+  }
+ };
+
+ const product1={
+  name:'basketball',
+  price:2095
+ };
+
+ 
+ const product2={
+  name:'cricket',
+  price:'2000'
+ };
+ const product3={
+  name:'cricket',
+  price:'2000'
+ };
+ 
+
+/* console.log(issamevalue(product1, product2));
+ console.log(issamevalue(product1, product3));*/
+ console.log(issamevalue(product2,product3));
+ 
+ 
+ 
+ "
+
+
+>ank</button>
+
+
+
+</body>
+
+
+<script>
+
+</script>
+</html>

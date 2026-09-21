@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="js-quantit"
+onclick="
+quantatity=quantatity+=1; 
+enterElement();
+"  
+  
+  >1</button>
+  <button onclick="quantatity=quantatity+=2; 
+enterElement();">2</button>
+  <button onclick="quantatity=quantatity+=3; 
+enterElement();">3</button>
+<button onclick="quantatity=quantatity*=0; 
+enterElement();">reset</button>
+<p class="js-a"></p>
+
+<script>
+
+  let quantatity=0;
+  function enterElement(){
+
+document.querySelector('.js-quantit');
+ document.querySelector('.js-a').innerHTML= quantatity;
+  }
+
+
+</script>
+
+  
+</body>
+</html>

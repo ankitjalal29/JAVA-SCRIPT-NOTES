@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+<title>8a exercise</title>
+  </head>
+<body>
+
+  <button onclick="playGame('heads');
+  ">heads</button>
+  <button onclick="playGame('tails');">tails</button>
+  <script>
+
+const score=JSON.parse(localStorage.getItem('score'))||{
+  wins:0,
+  loses:0
+};
+
+   function playGame(guess){
+    const randomToss=Math.random();
+    let result= '';
+    
+    if(randomToss>=0 && randomToss<=1/2){
+      console.log('heads')
+      result='heads';
+      
+    }
+    else if(randomToss>1/2&& randomToss<1){
+      console.log('tails');
+      result='tails';
+    }
+    if(guess===result){
+      console.log('you win');
+    }
+
+   else if(guess!==result)  {
+      console.log('you lose');
+    }
+    if(result===guess){
+     score.wins+=1;
+    }
+    else  {
+     score.loses+=1;
+    }
+    console.log(score);
+       localStorage.setItem('score', JSON.stringify(score));
+  };
+
+
+    //  question - 8a , 8b, 8c->>
+    // const product ={
+    //   name:'basketball',
+    //   price:2095
+    // };
+    // console.log(product);
+    // product.price+=500;
+    // console.log(product);
+    // product['delivery-time']='3 days';
+    // console.log(product);
+
+    // 8d....
+
+//     function comparePrice(product1,product2){
+      
+//    if(product1.price<product2.price){
+// return product1;
+//    }
+//    else{
+//     return product2;
+//    }
+
+//     };
+//       const product1={
+//   name:'cricket ball',
+//   price:4.566
+// };
+// const product2={
+//   name:'basketball',
+//   price:4.567
+// };
+//    console.log( comparePrice(product1,product2));
+
+// 8e,8f,8g
+
+// function isSameProduct(product1, product2, ){
+// if(product1.name===product2.name&&product1.price===product2.price){
+//   return true;
+// }
+// else{
+//   return false;
+// }
+// };
+// const product1={
+//   name:'basketball',
+//   price : 500
+// };
+// const product2={
+//   name:'basketball',
+//   price : 500
+// };
+
+// console.log(isSameProduct(product1,product2,));
+// console.log('GooD MorninG'.toLowerCase());
+// console.log('test'.repeat(2));
+
+
+
+  </script>
+</body>
+
+  </html>

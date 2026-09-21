@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>document object model(DOM)</title>
+  </head>
+  <body>
+    <button>hello
+    </button>
+    <button class="attributes">chang</button>
+
+
+    <script>
+console.log(document.querySelector('button'));
+
+document.querySelector('button').innerHTML='changed';
+const queryElement=(document.querySelector('.attributes'));
+console.log(queryElement);
+
+// console.log(document.title);
+// document.title='changed';
+// console.log(document.title);
+// console.log(document.body);
+// console.log(document.body.innerHTML);
+// document.body.innerHTML='<button>Good job!</button>';
+
+// // document.body.innerHTML='hello';
+// // document.title='good job!';
+
+
+    </script>
+  </body>
+</html>

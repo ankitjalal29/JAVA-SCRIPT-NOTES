@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>dom projects</title>
+    <link rel="stylesheet" href="dom.css">
+  </head>
+  
+  <body>
+    <h3>Youtube Subscribe Button</h3>
+    <button  onclick=" subscribekaro();"
+      class="subscribe-button sub-css">Subscribe</button>
+      <p>Amazon shipping Calculator</p>
+      <p>Orders under $40 = +$10 shipping.</p>
+      <p>Orders over $40 = FREE shipping. </p>
+      <input onkeydown="
+      if(event.key==='Enter'){
+        calculateTheAmmount();
+      }
+      " class="js-input input-css "  type="number"placeholder="enter the ammount">
+      <button class="css-input" onclick="
+      calculateTheAmmount();
+      
+      
+      ">Calculate</button>
+      <p class="calculator"></p>
+
+    <script>
+      
+   
+      function calculateTheAmmount(){
+        
+       const inputElement=document.querySelector('.js-input');
+     let cost = Number(inputElement.value);
+        if(cost<40&&cost!==0){
+          cost=cost+=10;
+        }
+        else if (cost>=40){
+          cost;
+        }
+        else if(cost===0){
+          cost=cost*0;
+        }
+        
+        document.querySelector('.calculator').innerHTML=`$${cost}`;
+      }
+
+
+    function subscribekaro(){
+      const element=document.querySelector('.subscribe-button');
+    if(element.innerText === 'Subscribe'){
+    element.innerHTML= 'subscribed';
+    element.classList.add('is-subscribed')
+    }
+    else {
+      element.innerHTML= 'subscribe';
+    element.classList.remove('is-subscribed');
+    } 
+    }
+
+    </script>
+  </body>
+</html>

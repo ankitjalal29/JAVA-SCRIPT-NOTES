@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    todolist
+  </title>
+</head>
+<style>
+  body{
+    font-family: Arial;
+    font-size: 20px;
+  }
+  button{
+    font-size: 20px;
+  }
+  input{
+    font-size: 20px;
+  }
+  .input-name,.input-element{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .input-element{
+  margin-bottom: 20px;
+  }
+  .color{
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .col{
+    background-color:red;
+    color: white;
+     border: none;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <h2>Todo List</h2>
+  <div class="input-element">
+  
+  <input type="text" placeholder="enter name" class="js-input-name">
+  <input type="date"placeholder="enter " class="js-input-todo">
+  <button onclick="addList();" class="color js-add-button">Add</button>
+</div>
+  <div class="input-div input-name"></div>
+
+</body>
+<script src="12-todo-list.js">
+
+
+</script>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>advanced function</title>
+</head>
+
+<body>
+
+<button class="js-button" onclick="
+updateButton();
+
+">start</button>
+<button class="js-add" onclick="displayMessage();" >add to cart</button>
+<p style="margin-left: 50px;" class="js-add-line "></p>
+  <script>
+function updateButton(){ 
+  const button= document.querySelector('.js-button');
+
+setTimeout(function(){
+  button.innerHTML='finished!';
+},1000);
+button.innerHTML='loading....';
+
+};
+let timeId;
+
+function displayMessage(){ 
+  const number= document.querySelector('.js-add-line');
+  number.innerHTML='Added!';
+
+clearTimeout(timeId);
+
+  timeId = setTimeout(function(){
+  number.innerHTML='';
+},2000);
+
+
+};
+
+
+
+
+
+
+
+    /*
+    function gretting() {
+      console.log('hello');
+    }
+    gretting();
+
+
+    const num = 2;
+    const function1 = function () {
+      console.log('hello2');
+    };
+    console.log(function1);
+    function1();
+
+
+    const object1={
+      num:2,
+      fun:function (){
+        console.log('hello3');
+      }
+    }
+      object1.fun();
+
+      function display(param){
+        console.log(param);
+      }
+      display(2);
+
+      function fun(param){
+        param();
+
+      }
+      fun(function(){
+      console.log('hello4');
+});
+
+setTimeout(function(){
+  console.log('timeout');
+  console.log('timeout2');
+},3000);
+console.log('nextline');
+setInterval(function(){
+  console.log('interval');
+},3000);
+console.log('next line2');
+
+
+ [
+  'ankit',
+  'jalal',
+  'name'
+ ].forEach(function(value,index){
+if(value==='ankit'){
+  return;
+}
+
+
+console.log(index);
+console.log(value);
+ });
+ 
+*/
+    const add = function () {
+      console.log(2 + 3);
+    }
+    add();
+    add();
+
+    function runTwice(fun) {
+      fun();
+      fun();
+      fun();
+    }
+runTwice (function(){
+  console.log('12b');
+});
+runTwice(function(){
+  console.log(2+6);
+});
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

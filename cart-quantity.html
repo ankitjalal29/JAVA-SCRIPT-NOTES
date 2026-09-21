@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+</style>
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart-qauntatity</title>
+</head>
+<body>
+
+  
+
+<button  onclick="alert('added');
+cartquantity +=5;
+// console.log(`CoffeeCost: $${cartquantity}`);
+
+" >coffee</button>
+<button onclick="cartquantity +=3;alert('added');
+// console.log(`BaglesCost: $${cartquantity}`);"
+>bagles</button>
+
+
+<button class="js-na" onclick="
+
+console.log(`total cost: $${cartquantity + cartquantity*(10/100)}`);
+
+  
+
+">total cost</button>
+
+<p class="js-ankit">1:</p>
+<script>
+  let cartquantity = 0;
+  let enterElement =document.querySelector('.js-na');
+document.querySelector('.js-ankit').innerHTML = enterElement;
+
+  
+</script>
+  
+</body>
+</html>
